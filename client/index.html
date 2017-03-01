@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+
+<title>Chat</title>
+  <script src ="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io.connect();
+      socket.emit('message',{value:'そいやぁぁぁぁぁぁぁぁぁぁぁ!!'});
+      socket.on('from_server',function(data){
+        console.log(data.value);
+      });
+    </script>
+</head>
+<body>
+<h1>Chat room</h1>
+
+
+
+
+<div class="message">
+
+  <form id="send">
+      <input type="text" id="message">
+      <input type="submit" value="Send">
+    </form>
+
+
+</div>
+
+
+
+
+</body>
+</html>
